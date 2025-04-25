@@ -7,7 +7,7 @@ class Programmer(Person):
 
     def introduce(self):
         # person 클래스의 hello 메소드 상속하여 호출
-        super().hello()
+        super()._hello()
         print(f"나는 {self.language} 언어로 프로그래밍 할 수 있습니다")
 """
 * 클래스의 상속

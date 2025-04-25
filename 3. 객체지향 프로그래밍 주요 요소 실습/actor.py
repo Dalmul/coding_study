@@ -6,5 +6,5 @@ class Actor(Person):
         self.film = film
 
     def introduce(self):
-        super().hello()
+        super()._hello()
         print(f"저의 대표작은 {self.film}입니다.")
