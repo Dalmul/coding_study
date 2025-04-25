@@ -1,11 +1,11 @@
 class BankUser:
-    def __init__(self, holder_name, money):
+    def __init__(self, name, money):
         self.__accounts = []
-        self.__holder_name = holder_name
+        self.__name = name
         self.__money = money
 
     def get_name(self):
-        return self.__holder_name
+        return self.__name
     
     def add_account(self, account):
         self.__accounts.append(account)
@@ -21,5 +21,5 @@ class BankUser:
         self.__money -= amount
 
     def get_assets(self):
-        print(f"이름: {self.__holder_name}, 보유 현금 : ${self.__money}")
+        print(f"이름: {self.__name}, 보유 현금 : ${self.__money}")
         self.get_accounts()

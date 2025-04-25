@@ -23,16 +23,21 @@ user1.add_account(account2)
 account2.unlock()
 
 # 예금 계좌에서 $ 400 출금
-account1.withdraw(400)
+account2.withdraw(400)
 # 다시 사용자에게 지급
 user1.add_money(400)
 
 # 지급된 $400를 다시 빼와서
 user1.deduct_money(400)
-# 예금 계좌에 저축
+# 입출금금 계좌에 저축
 account1.deposit(400)
 
 # 보유한 현금과 계좌목록 출력
 user1.get_assets()
+
+try:
+    account1.withdraw(800)
+except ValueError:
+    account1.update_limit(800)
 
 

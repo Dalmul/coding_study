@@ -50,7 +50,7 @@ class SavingsAccount(BankAccount):
         self.deposit(interest)
 
     def info(self):
-        print(f"[예금/{self.get_account_number()}] 잔액 ${self.get_balance()},이율 {self.__balance}%, 출금 제한 여부 : {self.__is_locked}")
+        print(f"[예금/{self.get_account_number()}] 잔액 ${self.get_balance()},이율 {self.__interest_rate * 100}%, 출금 제한 여부 : {self.__is_locked}")
 
 # 입출금 계좌
 class CheckingAccount(BankAccount):
