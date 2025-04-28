@@ -6,6 +6,7 @@ user_b = BankUser('B', 900)
 # 고객 B는 입출금 계좌에 $800를 저축, 예금 계좌에 $100를 저축한다.
 user_b.deduct_money(800)
 account1 = CheckingAccount(user_b.get_name(), 800)
+"""여기서 계좌 개설과 입출금이 따로 이루어지는 것을 비효율적. 계좌 개설과 입출금이 한꺼번에 이루어지도록 develop 연구"""
 user_b.deduct_money(100)
 account2 = SavingsAccount(user_b.get_name(), 100, 0.06)
 user_b.add_account(account1)
@@ -21,7 +22,8 @@ try:
 except ValueError:
     account1.update_limit(800)
     account1.withdraw(800)
-# 
+finally:
+    user_b.add_money(800)
 
 # 보유한 현금과 계좌목록 출력력
 user_b.get_assets()
